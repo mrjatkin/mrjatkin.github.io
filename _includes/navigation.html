@@ -1,0 +1,5 @@
+{% for link in site.navigation %}
+<li>
+	<a href="{{ link.url }}" title="{{ link.description }}">{{ link.text }}</a>
+</li>
+{% endfor %}

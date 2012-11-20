@@ -1,0 +1,15 @@
+---
+layout: simple_page
+title: Blog
+description: 
+---
+<ul class="blog_entries">
+{% for post in site.posts %}{% if post.category == 'blog' %}
+<li>
+	<a href="{{ post.url }}">
+		<h3>{{ post.title }}</h3>
+		{% if post.description %}<p>{{ post.description }}</p>{% endif %}
+	</a>
+</li>
+{% endif %}{% endfor %}
+</ul>

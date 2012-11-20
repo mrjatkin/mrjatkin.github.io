@@ -1,0 +1,30 @@
+<!doctype html>
+<html dir="ltr" lang="en-gb" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<title>{% if page.title %}{% assign title = page.title | append: ' - James Atkin' %}{% else %}{% assign title = 'James Atkin' %}{% endif %}{{ title }}</title>
+	<meta name="description" content="{% if page.description %}{% assign description = page.description %}{% else %}{% assign description = site.description %}{% endif %}{{ description }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:image" content="/img/dp.jpeg">
+	<meta property="og:site_name" content="James Atkin">
+	<meta property="og:url" content="{{ page.permalink }}">
+	<meta property="og:description" content="{{ description }}">
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<header id="top">
+		<div class="innerWrap">
+			<a href="/" class="dp-container"><img src="/img/dp.jpeg" alt="A head and shoulders photograph of me" class="dp"></a>
+			<h1 class="myname"><a href="/">James Atkin</a></h1>
+			<p class="tagline"><span class="lquote">&ldquo;</span>Hi! I&rsquo;m James, a student from <a href="http://goo.gl/maps/GKmdT" target="_blank">Chichester, United Kingdom</a>. I'm currently studying Computer Science at the <a href="http://www.port.ac.uk" target="_blank">University of Portsmouth</a>. I love technology, music and a good cup of tea.<span class="rquote">&rdquo;</span></p>
+		</div>
+	</header>
+	<nav id="navigation">
+		<ul class="innerWrap">
+			{% include navigation.html %}
+		</ul>
+	</nav>

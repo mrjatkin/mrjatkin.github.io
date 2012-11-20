@@ -1,0 +1,16 @@
+permalink: pretty
+
+description: A little website about me
+navigation:
+- text: Home
+  description: Homepage
+  url: /
+- text: Blog
+  description: Blog
+  url: /blog
+- text: Portfolio
+  description: A portfolio of my work
+  url: /portfolio
+- text: Contact Me
+  description: Find out how to contact me!
+  url: /contact

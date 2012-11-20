@@ -1,0 +1,190 @@
+@import "_base.scss";
+
+@include border-box-sizing;
+
+$header-bg: #00d0ff;
+$header-shadow: darken($header-bg, 20%);
+
+$nav_border_colour: #ccc;
+$nav-border: 1px solid $nav_border_colour;
+
+$main_link_colour: #1777ff;
+
+$footer-color: #9d9d9d;
+
+/*
+	Use this colour somewhere:
+	#1777ff
+	#006bff
+*/
+
+body {
+	@include border-box-sizing;
+	font: normal 13px/1.4 'Open Sans', sans-serif;
+	background: #f5f5f5;
+}
+
+.innerWrap {
+	@include container;
+}
+
+body>header {
+	padding: (1.5 * $grid-padding) $grid-padding;
+	background: $header-bg;
+	border-bottom: 1px solid $nav_border_colour;
+	color: #fff;
+	@include single-text-shadow($header-shadow, 0.2em, 0.2em);
+	
+	a {
+		color: #fff;
+	}
+	
+	.dp-container {
+		display: block;
+		@include span-columns(3, 12);
+	}
+	.dp {
+		padding: $grid-padding;
+		background: #fff;
+		max-width: 100%;
+		@include backface-visibility(hidden);
+		@include rotate(-3deg);
+		@include single-box-shadow($header-shadow, 0.2em, 0.2em);
+		
+		&:hover {
+			@include rotate(-2deg);
+		}
+	}
+	
+	.myname {
+		@include span-columns(9 omega, 12);
+		font-weight: bold;
+		font-size: 3em;
+	}
+	.tagline {
+		@include span-columns(9 omega, 12);
+		font-weight: bold;
+		font-size: 1.5em;
+		
+		/*
+		.lquote,
+		.rquote {
+			display: block;
+			font-size: 4em;
+			line-height: 1;
+		}
+		
+		.lquote {
+			float: left;
+			vertical-align: text-top;
+		}
+		.rquote {
+			float: right;
+			vertical-align: baseline;
+		}
+		*/
+	}
+}
+
+body>nav {
+	background: #fff;
+	border-bottom: $nav-border;
+	overflow: hidden;
+	
+	li {
+		float: left;
+		display: block;
+		border-right: $nav-border;
+		
+		&:first-child {
+			border-left: $nav-border;
+		}
+	}
+	a {
+		display: block;
+		padding: 1em;
+		color: #3a3a3a;
+		font-weight: bold;
+	}
+	.innerWrap {
+		padding: 0;
+	}
+}
+
+
+.msg {
+	clear: both;
+	padding: $grid-padding;
+	border: 1px solid #ccc;
+	background: #fff;
+	@include border-radius(0.2em);
+}
+
+.main {
+	margin-top: $grid-padding;
+	
+	ul {
+		list-style: square;
+	}
+	li {
+		display: list-item;
+		list-style-position: inside;
+	}
+	a {
+		color: $main_link_colour;
+		
+		&:hover, &:focus, &:active {
+			text-decoration: underline;
+		}
+	}
+}
+
+.simple_page {
+	
+	.innerWrap {
+		background: #fff;
+		border: 1px solid #ccc;
+		padding: $grid-padding;
+		@include border-radius(0.2em);
+	}
+	
+	header {
+		h2 {
+			font-weight: bold;
+			font-size: 1.5em;
+		}
+	}
+}
+
+
+
+body>footer {
+	margin-top: $grid-padding;
+	@include container;
+	color: $footer-color;
+	
+	a:hover,
+	a:focus,
+	a:active {
+		color: darken($footer-color, 25%);
+		text-decoration: underline;
+	}
+	.legals {
+		@include span-columns(6, 12);
+	}
+	.footNav {
+		@include span-columns(6 omega, 12);
+		text-align: right;
+		
+		li {
+			display: inline;
+			
+			&:after {
+				content: '\0020\002F\0020';
+			}
+			&:last-child:after {
+				content: '';
+			}
+		}
+	}
+}
