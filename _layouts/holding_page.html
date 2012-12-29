@@ -1,0 +1,39 @@
+<!doctype html>
+<html dir="ltr" lang="en-gb" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<title>{{ page.title }}</title>
+	<meta name="description" content="{% if page.description %}{% assign description = page.description %}{% else %}{% assign description = site.description %}{% endif %}{{ description }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:image" content="/img/dp.jpeg">
+	<meta property="og:site_name" content="James Atkin">
+	<meta property="og:url" content="{{ page.permalink }}">
+	<meta property="og:description" content="{{ description }}">
+	
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600">
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+	<header id="top">
+		<h1 class="myname">James Atkin</h1>
+		<img src="http://www.gravatar.com/avatar/8c924dbb756f8b18f87716326e228e00.jpg?s=160" alt="James Atkin's profile picture" class="dp">
+		<p class="tagline"><span class="lquote">&ldquo;</span>Hi! I&rsquo;m James, a student from <a href="http://goo.gl/maps/GKmdT" target="_blank">Chichester, United Kingdom</a>. I'm currently studying <a href="http://www.port.ac.uk/courses/coursetypes/undergraduate/BScHonsComputerScience/" target="_blank">Computer Science</a> at the <a href="http://www.port.ac.uk" target="_blank">University of Portsmouth</a>. I love technology, music and a good cup of tea.<span class="rquote">&rdquo;</span></p>
+	</header>
+
+
+	<div class="content">{{ content }}</div>
+
+
+	<footer>
+		<nav class="footNav">
+			<ul>
+				<li><a href="http://github.com/jatkin" title="Github Profile">Github</a> |</li>
+				<li><a href="http://uk.linkedin.com/in/mrjatkin/" title="Linkedin Profile">Linkedin</a></li>
+			</ul>
+		</nav>
+		<small class="legals">&copy; 2012 James Atkin.</small>
+	</footer>
+</body>
+</html>

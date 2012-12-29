@@ -5,22 +5,15 @@
 $legacy-support-for-ie: false;
 $legacy-support-for-mozilla: false;
 
-
 // Susy grid variables
 $total-columns: 12;
-$column-width: 6em;
+$column-width: 4em;
 $gutter-width: 1em;
 $grid-padding: $gutter-width;
 
 
 
-
-
 @include global-reset;
-
-.inline {
-	display: inline;
-}
 
 strong {
 	font-weight: bold;
@@ -43,5 +36,4 @@ p {
 	
 a {
 	text-decoration: none;
-	color: inherit;
 }
