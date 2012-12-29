@@ -1,15 +1,8 @@
 @import "compass";
-@import "susy";
 
 // Browser support
 $legacy-support-for-ie: false;
 $legacy-support-for-mozilla: false;
-
-// Susy grid variables
-$total-columns: 12;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: $gutter-width;
 
 
 
