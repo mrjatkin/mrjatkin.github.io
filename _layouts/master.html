@@ -1,0 +1,52 @@
+<!doctype html>
+<html dir="ltr" lang="en-gb" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+        <meta name="description" content="{% if page.description %}{% assign description = page.description %}{% else %}{% assign description = site.description %}{% endif %}{{ description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta property="og:title" content="{{ title }}">
+        
+        <!--<meta property="og:image" content="/img/dp.jpeg">-->
+        <meta property="og:site_name" content="James Atkin">
+        <meta property="og:url" content="{{ page.permalink }}">
+        <meta property="og:description" content="{{ description }}">
+        
+        <link rel="stylesheet" href="/css/site.css">
+    </head>
+    <body>
+        <header id="top">
+            <h1><a href="/">James Atkin</a></h1>
+            
+            <nav>
+                <ul>
+                    {% for index in (1..10) %}
+                        {% for p in site.pages %}
+                            {% if p.menuOrder == index %}
+                                {% if p.menuTitle != null %}
+                                    {% assign t = p.menuTitle %}
+                                {% else %}
+                                    {% assign t = p.title %}
+                                {% endif %}
+                                <li>
+                                {% if page.url == p.url %}
+                                    <a href="{{p.url}}" class="current">{{t}}</a>
+                                {% else %}
+                                    <a href="{{p.url}}">{{t}}</a>
+                                {% endif %}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </header>
+        {{ content }}
+        <footer>
+            <small class="legal">
+                Copyright &copy {{ site.date | date: "%Y" }} James Atkin, All Rights Reserved! | Hosted on <a href="http://pages.github.com">GitHub Pages</a>
+            </small>
+        </footer>
+    </body>
+</html>

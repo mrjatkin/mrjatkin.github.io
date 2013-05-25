@@ -1,0 +1,17 @@
+$pad: 1rem;
+
+$navColor: #17a7c1;//#17c15c #17a7c1
+
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.cf {
+    /*! BEGIN clearfix */
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    /*! ENF clearfix */
+}
