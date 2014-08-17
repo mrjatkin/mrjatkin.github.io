@@ -1,1 +1,1 @@
-A little website to show off my work
+Currently a holding page, with potential to be so much more.

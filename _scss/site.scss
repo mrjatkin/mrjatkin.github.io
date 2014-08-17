@@ -1,4 +1,4 @@
-@import "_vars.scss";
+$pad: 1em;
 
 * {
     -moz-box-sizing: border-box;
@@ -15,97 +15,21 @@ body {
     margin: 0 auto;
     padding: $pad;
     background: #f5f5f5;
+    color: #333;
 }
 
 a {
+    color: #333;
     text-decoration: none;
-}
 
-
-body>header {
-    @extend .cf;
-    
-    &, a {
-        color: #333;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
-    h1 {
-        float: left;
-    }
-    nav {
-        float: right;
-        
-        ul {
-            list-style: none;
-            display: block;
-            text-align: right;
-        }
-        li {
-            display: inline-block;
-            
-            &:nth-child(2n) {
-                a {
-                    background: lighten($navColor, 5%);
-                }
-            }
-            &:nth-child(3n) {
-                a {
-                    background: darken($navColor, 5%);
-                }
-            }
-            &:nth-child(4n) {
-                a {
-                    background: lighten($navColor, 10%);
-                }
-            }
-        }
-        a {
-            display: inline-block;
-            padding: $pad;
-            
-            opacity: 0.5;
-            
-            text-shadow: 0 0.1em 0.1em #555;
-            
-            
-            -webkit-transition: opacity 0.3s ease-out;
-            -moz-transition: opacity 0.3s ease-out;
-            -o-transition: opacity 0.3s ease-out;
-            transition: opacity 0.3s ease-out;
-            
-            background: $navColor;
-            color: #fff;
-            
-            &.current,
-            &:hover,
-            &:focus {
-                opacity: 1;
-            }
-            
-            
-            font-weight: bold;
-            
-            i {
-                font-weight: normal;
-            }
-        }
-    }
-}
-
-.main {
-    clear: both;
-    margin: $pad 0 0 0;
-    padding: $pad;
-    background: #fff;
 }
 
 footer {
     margin-top: $pad;
     text-align: center;
-    
-    &, a {
-        color: #333;
-    }
-    &, .letals {
-        font-size: 0.8em;
-    }
+    font-size: 0.8em;
 }
