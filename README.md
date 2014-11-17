@@ -1,1 +1,1 @@
-A little website to show off my work
+A little website about me

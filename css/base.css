@@ -1,0 +1,84 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+
+  background: #c7ebe6;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  text-align: left;
+}
+
+a {
+  color: #377539;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.wrap {
+  padding: 0.5em;
+}
+
+.main {
+  width: 100%;
+  max-width: 32em;
+  padding: 1em;
+  margin: 0 auto;
+
+  background: #fff;
+
+  text-align: center;
+}
+
+.avatar {
+  display: block;
+  width: 144px;
+  height: 144px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: url("http://www.gravatar.com/avatar/8c924dbb756f8b18f87716326e228e00?s=144") center center no-repeat;
+  background-clip: padding-box;
+
+  -webkit-box-shadow: 0.25em 0.25em 0.25em 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0.25em 0.25em 0.25em 0 rgba(0, 0, 0, 0.2);
+
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.avatar:hover,
+.avatar:focus {
+  -webkit-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+          transform: scale(1.0);
+}
+
+.headline {
+  font-size: 1.5em;
+}
+
+@media (min-width: 28rem) {
+  .wrap {
+    padding: 1em;
+  }
+}
