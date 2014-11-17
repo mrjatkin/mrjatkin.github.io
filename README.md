@@ -1,1 +1,1 @@
-A little website about me
+Currently a holding page, with potential to be so much more.

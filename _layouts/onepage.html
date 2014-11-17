@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>James Atkin</title>
+        <meta name="description" content="{% if page.description %}{% assign description = page.description %}{% else %}{% assign description = site.description %}{% endif %}{{ description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/site.css">
+    </head>
+    <body>
+        <header id="top">
+            <h1><a href="/">James Atkin</a></h1>
+        </header>
+        {{ content }}
+        <footer>
+            <small class="legal">
+                &copy; 2014 | Hosted on <a href="http://pages.github.com">GitHub Pages</a>
+            </small>
+        </footer>
+    </body>
+</html>
