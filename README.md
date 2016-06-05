@@ -1,1 +1,2 @@
-Currently a holding page, with potential to be so much more.
+Just a holding page, for now
+
